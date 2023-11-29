@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CistellaController">
+   <children>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="600.0">
+        <menus>
+          <Menu fx:id="menuBarLogout" mnemonicParsing="false" text="Logout" />
+          <Menu fx:id="menuBarUsuari" mnemonicParsing="false" text="Usuari" />
+          <Menu fx:id="menuBarHome" mnemonicParsing="false" text="Home" />
+        </menus>
+      </MenuBar>
+      <SplitPane dividerPositions="0.29797979797979796" layoutY="27.0" prefHeight="374.0" prefWidth="600.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Label layoutX="39.0" layoutY="22.0" text="CISTELLA">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="56.0" layoutY="92.0" text="QUANTITAT" />
+                  <Label layoutX="54.0" layoutY="150.0" text="PREU TOTAL" />
+                  <Label fx:id="labelQuanitat" layoutX="75.0" layoutY="122.0" text="error" />
+                  <Label fx:id="labelPreuTotal" layoutX="75.0" layoutY="186.0" text="error" />
+                  <Button fx:id="buttonComprar" layoutX="57.0" layoutY="312.0" mnemonicParsing="false" text="Comprar" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <ListView fx:id="listViewCistella" prefHeight="372.0" prefWidth="417.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

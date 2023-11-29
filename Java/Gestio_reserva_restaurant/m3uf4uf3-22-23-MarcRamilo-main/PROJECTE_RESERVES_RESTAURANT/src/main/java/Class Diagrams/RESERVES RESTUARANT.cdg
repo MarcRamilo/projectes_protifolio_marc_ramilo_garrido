@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="RESERVES RESTUARANT">
+  <ClassDiagramComponents>
+    <Class name="Restaurant" package="" visibility="public" xPosition="767.0" yPosition="442.0">
+      <Fields>
+        <Field name="nom" type="String" visibility="private"/>
+        <Field name="direccio" type="String" visibility="private"/>
+        <Field name="telefon" type="String" visibility="private"/>
+        <Field name="horari" type="String[]" visibility="private"/>
+        <Field name="zones" type="String[]" visibility="private"/>
+        <Field name="usuaris" type="String[]" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="afegirNovaZona" returnType="void" visibility="public"/>
+        <Method name="buscarZonaPerId" returnType="void" visibility="public"/>
+        <Method name="llegirReserva" returnType="void" visibility="public"/>
+        <Method name="modificarReserva" returnType="void" visibility="public"/>
+        <Method name="crearReserva" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Zona" package="" visibility="public" xPosition="767.0" yPosition="920.0">
+      <Fields>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="capacitat" type="int" visibility="private"/>
+        <Field name="preuPersona" type="int" visibility="private"/>
+        <Field name="zones" type="Zona[]" visibility="private"/>
+        <Field name="accesibilitat" type="Boolean" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="getCapacitat" returnType="int" visibility="public"/>
+        <Method name="getpreuPerosna" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="int" visibility="public"/>
+        <Method name="setCapacitat" returnType="int" visibility="public"/>
+        <Method name="setPreuPersona" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Usuari" package="" visibility="public" xPosition="92.0" yPosition="349.0">
+      <Fields>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="nom" type="String" visibility="private"/>
+        <Field name="cognom" type="String" visibility="private"/>
+        <Field name="correu" type="String" visibility="private"/>
+        <Field name="telefon" type="int" visibility="private"/>
+        <Field name="clientAdmin" type="Boolean" visibility="private"/>
+        <Field name="idReserva" type="int" visibility="private"/>
+        <Field name="usuaris" type="Usuari[]" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="getNom" returnType="String" visibility="public"/>
+        <Method name="getCognom" returnType="String" visibility="public"/>
+        <Method name="getCorreu" returnType="String" visibility="public"/>
+        <Method name="getTelefon" returnType="int" visibility="public"/>
+        <Method name="getClientAdmin" returnType="boolean" visibility="public"/>
+        <Method name="getUsuaris" returnType="Usuari" visibility="public"/>
+        <Method name="setNom" returnType="String" visibility="public"/>
+        <Method name="setCognom" returnType="String" visibility="public"/>
+        <Method name="setCorreu" returnType="String" visibility="public"/>
+        <Method name="setTelefon" returnType="int" visibility="public"/>
+        <Method name="setClientAdmin" returnType="boolean" visibility="public"/>
+        <Method name="setUsuaris" returnType="Usuari" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Reserva" package="" visibility="public" xPosition="18.0" yPosition="896.0">
+      <Fields>
+        <Field name="idReserva" type="int" visibility="private"/>
+        <Field name="horaReserva" type="LocalDateTime" visibility="private"/>
+        <Field name="reserves" type="Reserva[]" visibility="private"/>
+        <Field name="observacions" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="reailitzarReserva" returnType="LocalDate" visibility="public">
+          <Argument type="LocalDate" name="horaReserva"/>
+        </Method>
+        <Method name="cancelarReserva" returnType="void" visibility="public"/>
+        <Method name="getReserves" returnType="Reserva" visibility="public"/>
+        <Method name="getobservacions" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Arxius" package="" visibility="public" xPosition="773.0" yPosition="152.0">
+      <Fields>
+        <Field name="nomArxiu" type="String" visibility="private"/>
+        <Field name="ubicacioArxiu" type="String" visibility="private"/>
+        <Field name="dadesArxiu" type="String[]" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="llegirArxiu" returnType="void" visibility="public"/>
+        <Method name="escriureArxiu" returnType="void" visibility="public"/>
+        <Method name="getDadesArxiu" returnType="void" visibility="public"/>
+        <Method name="serDadesArxiu" returnType="void" visibility="public"/>
+        <Method name="getNomArxiu" returnType="void" visibility="public"/>
+        <Method name="getUbicacioArxiu" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ZonaInterior" package="" visibility="public" xPosition="555.0" yPosition="1273.0">
+      <Fields>
+        <Field name="aireCondicionat" type="Boolean" visibility="private"/>
+        <Field name="zonaJocs" type="String[]" visibility="private"/>
+        <Field name="cambrerRobot" type="Boolean" visibility="private"/>
+        <Field name="NomZonaInt" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getAireCondicionat" returnType="Boolean" visibility="public"/>
+        <Method name="getZonaJocs" returnType="String[]" visibility="public"/>
+        <Method name="getcambrerRobot" returnType="Boolean" visibility="public"/>
+        <Method name="getNomInt" returnType="String" visibility="public"/>
+        <Method name="setAireCondicionat" returnType="Boolean" visibility="public"/>
+        <Method name="setZonaJocs" returnType="String[]" visibility="public"/>
+        <Method name="setcambrerRobot" returnType="Boolean" visibility="public"/>
+        <Method name="setNomInt" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Reservar" package="" visibility="public" xPosition="18.0" yPosition="1388.0">
+      <Fields>
+        <Field name="Reserva" type="reserva" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="realitzarOperacions" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="operacioReserva" package="" visibility="public" xPosition="92.0" yPosition="1212.0">
+      <Fields>
+        <Field name="Reserva" type="reserva" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="realitzarOperacions" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ZonaExterior" package="" visibility="public" xPosition="896.0" yPosition="1273.0">
+      <Fields>
+        <Field name="sumplementTerrasa" type="int" visibility="private"/>
+        <Field name="paraSol" type="boolean" visibility="private"/>
+        <Field name="ServeisAdiccionals" type="String[]" visibility="private"/>
+        <Field name="NomZonaExt" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getSumplementTerrasa" returnType="int" visibility="public"/>
+        <Method name="getParaSol" returnType="Boolean" visibility="public"/>
+        <Method name="getNomExt" returnType="String" visibility="public"/>
+        <Method name="setSumplementTerrasa" returnType="int" visibility="public"/>
+        <Method name="setParaSol" returnType="Boolean" visibility="public"/>
+        <Method name="setServeiAdiccionals" returnType="String[]" visibility="public"/>
+        <Method name="setNomExt" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Taula" package="" visibility="public" xPosition="473.0" yPosition="646.0">
+      <Fields>
+        <Field name="numTaula" type="int" visibility="private"/>
+        <Field name="idZona" type="int" visibility="private"/>
+        <Field name="numPersTaula" type="int" visibility="private"/>
+        <Field name="estat" type="String" visibility="private"/>
+        <Field name="taules" type="Taula[]" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getNumTaula" returnType="int" visibility="public"/>
+        <Method name="getIdZona" returnType="int" visibility="public"/>
+        <Method name="getNumPersTaula" returnType="int" visibility="public"/>
+        <Method name="getEstat" returnType="String" visibility="public"/>
+        <Method name="setNumTaula" returnType="int" visibility="public"/>
+        <Method name="setIdZona" returnType="int" visibility="public"/>
+        <Method name="setNumPersTaula" returnType="int" visibility="public"/>
+        <Method name="setEstat" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Cancelar" package="" visibility="public" xPosition="246.0" yPosition="1388.0">
+      <Fields>
+        <Field name="Reserva" type="reserva" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="realitzarOperacions" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="operacioReserva" target="Reserva"/>
+    <IsRelation name="is" source="ZonaExterior" target="Zona"/>
+    <HasRelation name="té" source="Restaurant" target="Usuari" type="Composition" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="té" source="Reserva" target="Zona" type="Aggregation" sourceCardinality="0..1" targetCardinality="0..*" collectionType="List"/>
+    <HasRelation name="TÉ" source="Reserva" target="Taula" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Reservar" target="operacioReserva"/>
+    <HasRelation name="té" source="Reserva" target="Usuari" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="té" source="Restaurant" target="Arxius" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="ZonaInterior" target="Zona"/>
+    <HasRelation name="té" source="Zona" target="Restaurant" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <IsRelation name="is" source="Cancelar" target="operacioReserva"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

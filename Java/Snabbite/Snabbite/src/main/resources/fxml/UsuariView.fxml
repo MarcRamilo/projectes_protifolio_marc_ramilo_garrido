@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UsuariViewController">
+   <children>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="600.0">
+        <menus>
+          <Menu fx:id="menuBarLogout" mnemonicParsing="false" text="Logout" />
+          <Menu fx:id="menuBarHome" mnemonicParsing="false" text="Home" />
+        </menus>
+      </MenuBar>
+      <SplitPane dividerPositions="0.32441471571906355" layoutY="27.0" prefHeight="374.0" prefWidth="600.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <GridPane layoutX="14.0" layoutY="55.0" prefHeight="278.0" prefWidth="175.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="107.0" minWidth="10.0" prefWidth="99.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="107.0" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Nom" />
+                        <Label text="Cognom" GridPane.rowIndex="1" />
+                        <Label text="Telefon" GridPane.rowIndex="2" />
+                        <Label text="Contrasenya" GridPane.rowIndex="3" />
+                        <Label text="Ciutat" GridPane.rowIndex="4" />
+                        <Label text="Carrer" GridPane.rowIndex="5" />
+                        <Label text="Num" GridPane.rowIndex="6" />
+                        <Label fx:id="labelNom" text="error" GridPane.columnIndex="1" />
+                        <Label fx:id="labelCognom" text="error" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label fx:id="labelTelefon" text="error" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label fx:id="labelContrassenya" text="error" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label fx:id="labelCiutat" text="error" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label fx:id="labelCarrer" text="error" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Label fx:id="labelNum" text="error" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                     </children>
+                  </GridPane>
+                  <Label layoutX="56.0" layoutY="14.0" text="HOLA!">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="buttonEdita" layoutX="62.0" layoutY="333.0" mnemonicParsing="false" text="Edita" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <ListView fx:id="listVIewComandes" layoutY="20.0" prefHeight="358.0" prefWidth="417.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-16.0" />
+                  <Label layoutX="175.0" prefHeight="17.0" prefWidth="68.0" text="COMANDES" textAlignment="CENTER" AnchorPane.leftAnchor="175.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
